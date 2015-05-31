@@ -1,0 +1,55 @@
+#include<iostream>
+using namespace std;
+
+
+class   korisnikDionica{
+
+private:
+    int id_korisnika;
+    int id_dionice;
+    int broj_dionica;
+    bool prodaja;
+public:
+    korisnikDionica(int a, int b, int c, bool d):id_korisnika(a),id_dionice(b),broj_dionica(c),prodaja(d)){}
+    void setID_korisnika(int id)
+    {
+        id_korisnika=id;
+    }
+    void setID_dionice(int id)
+    {
+        id_dionice=id;
+    }
+    void setBroj_dionica(int broj)
+    {
+        broj_dionica=broj;
+    }
+    void setProdaja(bool prd)
+    {
+        prodaja=prd;
+    }
+    int getID_korisnika()
+    {
+        return id_korisnika;
+    }
+    int getID_dionice()
+    {
+        
+        return id_dionice;
+    }
+    int getBroj_dionica()
+    {
+        return broj_dionica;
+    }
+    bool getProdaja()
+    {
+        return prodaja;
+    }
+    bool operator==(korisnikDionica korisnik)
+    {
+        if(id_korisnika==korisnik.id_korisnika)
+            return true;
+        return false;
+        
+    }
+  
+};
